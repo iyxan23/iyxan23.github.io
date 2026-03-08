@@ -4,6 +4,10 @@ author: NurIhsan
 date: 2026-03-08 17:16:21 +0700
 categories: Thoughts
 tags: [journal, thoughts, essay]
+image:
+  path: /assets/img/salah-paham.webp
+  lqip: data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAADwBACdASoUAA0APpE4l0eloyIhMAgAsBIJbACdMoR3DhVSIKF6eRmj3y2PQkR4wwAA/u/lrsuYhaYS8Sg0q57PXKPQQ6ZqEPSixLELwaZ+8rc+g2+uMELRsolLytufvac46y8WY5aTi6doKuA5Fry0hEPwux8XrbSh5p/qWYxOCQRHUQNs94oMYjvq/J0Xnx6FWJ7+JIvU4WtjT07cR8pIEX9egL4P+qKrL30DeJiCLOJK0DrizpKPexe4CONwbrOoXgAA
+  alt: Gambaran abstrak salah paham oleh ChatGPT
 ---
 
 Jadi… kisah ini dimulai dari saya yang sedang menjelajahi Wikipedia.
