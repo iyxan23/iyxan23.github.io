@@ -7,7 +7,7 @@ tags: [journal, thoughts, essay]
 image:
   path: /assets/img/salah-paham.webp
   lqip: data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAABwBACdASoUAA0APpE4l0eloyIhMAgAsBIJZgCdMoR4GdBk4iF7wykeY2WbAAD+0gJlFxS6Ivm9DUzLLJaG4aDq3ebw4Y1K0NIEXuIpcbiz58ZEOIQNDHeRNh6w+AwnIf7BhHI4XDotFWoWUT1SSz9Oww46XppQyXv25YR+mn+wp2SuCDhdsiQQ/ahQBo1QwM38/udgKMq0sqOFde9x/XAwDngknpH/G3mKj0yFvRNRE0KcbxAAAA==
-  alt: Petani dan Nelayan Salah Paham (dibuat menggunakan ChatGPT)
+  alt: Petani dan Nelayan Salah Paham (AI-generated Image)
 ---
 
 Jadi… kisah ini dimulai dari saya yang sedang menjelajahi Wikipedia.
