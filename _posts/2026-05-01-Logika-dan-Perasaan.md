@@ -161,8 +161,8 @@ Jujur, angkringan itu adalah suatu fenomena yang bagiku sendiri cukup unik di Ja
 
 Maka aku jawab, karena tujuan dari angkringan bukanlah terletak pada makanannya, melainkan teman-teman atau bapak-bapak yang biasanya nongkrong di tempat itu sampai larut malam. Bagaikan fenomena coffee shop yang sudah terbentuk dari zaman Kasunanan Surakarta Hadiningrat. Dan indahnya, budaya itu masih berdiri sampai sekarang.
 
-![Menikmati Hidangan Hik atau Angkringan di Jawa 1910 (Koleksi http://www.kitlv.nl)](/assets/img/logika-dan-perasaan/angkringan.webp)
-_Menikmati Hidangan Hik atau Angkringan di Jawa 1910 (Koleksi [http://www.kitlv.nl](http://www.kitlv.nl/))_
+![Menikmati Hidangan Hik atau Angkringan di Jawa 1910 (Koleksi https://www.kitlv.nl)](/assets/img/logika-dan-perasaan/angkringan.webp)
+_Menikmati Hidangan Hik atau Angkringan di Jawa 1910 (Koleksi [https://www.kitlv.nl](https://www.kitlv.nl/))_
 
 Mengingat perjalanan sebelumnya, memang masuk akal bahwa perasaan itu adalah suatu hal yang mendorong logika. Tersirat di kepalaku, membayangkan bapak-bapak yang biasanya mengisi penuh suatu angkringan untuk ngeteh atau ngobrol bersama.
 
