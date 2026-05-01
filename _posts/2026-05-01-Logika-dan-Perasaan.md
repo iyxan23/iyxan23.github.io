@@ -1,7 +1,7 @@
 ---
 title: "Logika dan Perasaan"
 author: NurIhsan
-date: 2026-05-01 17:29:57
+date: 2026-05-01 17:29:57 +0700
 categories: Thoughts
 tags: [journal, thoughts, essay]
 image:
