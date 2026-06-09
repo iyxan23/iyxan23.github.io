@@ -1,5 +1,5 @@
 ---
-title: "Esai Ringan: Tentang Salah Paham"
+title: "Tentang Salah Paham"
 author: NurIhsan
 date: 2026-03-08 17:16:21 +0700
 categories: Thoughts
