@@ -4,43 +4,36 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Hi all! I'm Nur Ihsan Al Ghifari, people IRL call me Ihsan but I'm more commonly known throughout the internet
-(and communities) as iyxan23!
+Hi everyone! I'm Nur Ihsan Al Ghifari, people IRL call me Ihsan, but I'm more
+commonly known throughout the net with my pseudonym iyxan23. If you see a
+profile named "iyxan23" or just "iyxan" anywhere, that's most likely mine.
 
-I'm a super passionate and very curious coder ever since I touched my first ever piece of technology, it was
-when I was about in my 3rd year of my elementary school (which is about 2017).
+I'm just a regular Indonesian student of Universitas Muhammadiyah Surakarta
+(UMS), currently studying in the field Informatics. I like anything tech,
+philosophy, sociology, economics, or something science. I can speak 3
+languages: Javanese (no "krama"), Indonesian (duh), and English (wow so cool
+right?), and currently (barely) learning Mandarin out of curiosity.
 
-My journey started when I discovered an app named "Sketchware". It blew my mind! I was able to create working,
-living, and installable android apps in my android phone!
+If you've known about me a bit, read some of my articles, seen my profile(s),
+or you're one of my online friends (hi guys), you probably already know that I
+have quite some experience in programming beforehand. I have been programming
+since I was around a 3rd gradeschooler, when I first discovered an app named
+Sketchware, and got pretty active in online communities.
 
-I made several programs, even made an app for my teacher, which made them quite impressed. My class started
-calling me the crazy coding kid, because I really love to show my passion for programming to them! Haha, I
-think I was a bit too much! (full life story [here](/posts/Life-Story))
+That decision marked my entire career turning point, where I would decide to
+deepen my skills when I became a teen during the pandemic years. I made a lot
+of random interesting projects here and there to fill in my free time that
+revolves around different technologies like Android, Java, Kotlin, Python,
+(even some in Rust or robotics, and in more recent projects, mostly
+TypeScript/NextJS) all published in my github profile. 
 
-Years of elementary school was a bit boring for little iyxan, since he didn't get much time and resources
-developing his skills. Until the next big thing happened. The mighty pandemic.
+Throughout my whole life, I have explored so many interesting fields in
+computing or really pretty much anything related to computers. It pretty much
+became my main passion to pursue lol.
 
-Coronavirus spread across the world, forcing people to stay within the boundaries of their home. I was in
-that lockdown, at my house, having nothing to do, and bored. So I decided to join online communities,
-which surprisingly, boosted my english abilities by almost 1000%! I made a lot of friends online, and made
-a lot of cool stuff with them as well.
+In this site, you'll find me write random thoughts, pretty much. It could be
+something that really excited me in tech, deep-dives into the many
+philosophical soup that has been simmering in my head for too long, or maybe
+just random stories I want to put out there for some reason.
 
-The times during the pandemic were a bit rough, but I had entered my own world, with my own friends, and
-developed my programming skills even further by the help of my newfound english.
-
-Akh, I can't believe the amount of projects I made! It was like a disease. I was once developing a single
-project, had some fun with it, then came in another project idea. Trashed the previous project, work on
-another one. And the cycle goes on and on. It never stopped.
-
-It was fun and all, until I realised the big pile of abandoned projects that I made. Uhh, noone's going to
-mess with those... Though, in the bright side, I learned a lot of cool technologies from many different fields!
-Like Android, Fullstack webdev, Linuxy stuff (I daily drove arch at that time), low-level programming and
-so many cool things. (check out my [github](https://github.com/iyxan23))
-
-It was a really fun experience when I was at my middle school days (in my home).
-
-Until everything changed as I enter The Vocational High School of IDN Boarding School. It changed my entire
-view about life. It made me connect with a lot of really awesome people, went overseas for the first time
-(to malaysia), and probably is the peak of my programming life as a teen. (new articles incoming)
-
-Thanks for reading!
+Thanks for coming in! I hope you may find something interesting here.
