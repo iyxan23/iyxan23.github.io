@@ -1,0 +1,34 @@
+---
+---
+
+{% for font in site.data.fonts %}
+  {% assign font_definition = font[1] %}
+  {% if font_definition.google %}
+@import url('{{ font_definition.google }}');
+  {% endif %}
+{% endfor %}
+
+@import 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+{% for font in site.data.fonts %}
+ {% assign font_key = font[0] %}
+ {% assign font_definition = font[1] %}
+ {% if font_definition.file %}
+@font-face {
+ font-family: '{{ font_definition.family }}';
+ src: url('{{ font_definition.file | relative_url }}') format('{{ font_definition.format | default: "woff2" }}');
+ font-display: swap;
+}
+ {% endif %}
+
+body.font-{{ font_key }} {
+ main,
+ #tail-wrapper {
+   font-family: {{ font_definition.family }};
+ }
+}
+{% endfor %}

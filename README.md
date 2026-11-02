@@ -45,6 +45,35 @@ $ bundle
 
 Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
 
+### Page fonts
+
+Set `font: serif` in a page or post's front matter to render its main content in a serif
+font. Pages without this key use the default sans-serif font.
+
+To add a custom font, put its `.woff2` or `.woff` file in `assets/fonts/` and register it in
+`_data/fonts.yml`:
+
+```yaml
+my-font:
+  family: "My Font"
+  file: "/assets/fonts/my-font.woff2"
+  format: woff2
+```
+
+Then use `font: my-font` in a page's front matter. The `family` value must match the font's
+internal family name.
+
+You can also use a Google Fonts stylesheet URL directly:
+
+```yaml
+roboto:
+  family: "Roboto"
+  google: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+```
+
+Then select it with `font: roboto`. Copy the URL from Google Fonts' embed instructions,
+including any requested weights and styles.
+
 ## Contributing
 
 The contents of this repository are automatically updated when new releases are made to the [main repository][chirpy].  
