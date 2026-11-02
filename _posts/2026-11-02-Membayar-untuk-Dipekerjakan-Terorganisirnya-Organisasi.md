@@ -112,7 +112,7 @@ Mungkin kita akan merujuk kepada daftar program kerja yang telah ditentukan oleh
 
 Organisasi diawali ketika seseorang memiliki sebuah inisiatif untuk membangun suatu hal yang baru, seperti menjadi sepatu pertama yang menjajaki rerumputan pada tengah hutan sebelum adanya jalan setapak. Inisiatif inilah yang merupakan esensi awal dari sebuah organisasi.
 
-Berbeda dengan skill, inisiatif itu bukan suatu hal yang bisa dipelajari seperti materi perkuliahan. Inisiatif itu tumbuh sendiri, tidak dari membaca buku-buku materi bagaikan pengetahuan biasa. Seorang founder tidak membangun sebuah perusahaan karena langkah-langkah yang ada pada sebuah buku. Mungkin dia membangun perusahaan *sesuai* langkah-langkah dari buku, tetapi yang membuat dia **membangun perusahaan adalah inisiatif yang telah tumbuh pada dirinya sendiri.
+Berbeda dengan skill, inisiatif itu bukan suatu hal yang bisa dipelajari seperti materi perkuliahan. Inisiatif itu tumbuh sendiri, tidak dari membaca buku-buku materi bagaikan pengetahuan biasa. Seorang founder tidak membangun sebuah perusahaan karena langkah-langkah yang ada pada sebuah buku. Mungkin dia membangun perusahaan *sesuai* langkah-langkah dari buku, tetapi yang membuat dia membangun perusahaan adalah inisiatif yang telah tumbuh pada dirinya sendiri.
 
 Dan entah dari mana, muncul inisiatif dari seorang Budi, anggota biasa yang tidak tahu-menahu ketika ia awal masuk. Ia hanya mengikuti kegiatan dan mengangguk akan tugas yang diberikan kepadanya. Dia bergerak bukan karena telah dikejar-kejar oleh ketua selama berhari-hari, tetapi karena dia ingin melakukannya sendiri.
 
