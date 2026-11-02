@@ -4,6 +4,7 @@ author: NurIhsan
 date: 2026-05-01 17:29:57 +0700
 categories: Thoughts
 tags: [journal, thoughts, essay]
+font: serif
 image:
   path: /assets/img/logika-dan-perasaan/cover.webp
   lqip: data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBACdASoUAA0APpE6l0eloyIhMAgAsBIJZwCdACHdPBtT0rs8ANoo4AD+6V/zmqj1vzbcO3SNoXeRhGmhIu1PAzs/QBKL8y3CXA9oIqxjcbcZUXzmGc3VNZpdKOiOrNWFCt4Jd10R7bUMtNtaQfx87owoLRl+AVv1uynPBOcTMvs9i+0pDOAA
