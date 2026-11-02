@@ -63,6 +63,17 @@ my-font:
 Then use `font: my-font` in a page's front matter. The `family` value must match the font's
 internal family name.
 
+You can also use a Google Fonts stylesheet URL directly:
+
+```yaml
+roboto:
+  family: "Roboto"
+  google: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+```
+
+Then select it with `font: roboto`. Copy the URL from Google Fonts' embed instructions,
+including any requested weights and styles.
+
 ## Contributing
 
 The contents of this repository are automatically updated when new releases are made to the [main repository][chirpy].  

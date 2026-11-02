@@ -1,6 +1,13 @@
 ---
 ---
 
+{% for font in site.data.fonts %}
+  {% assign font_definition = font[1] %}
+  {% if font_definition.google %}
+@import url('{{ font_definition.google }}');
+  {% endif %}
+{% endfor %}
+
 @import 'main
 {%- if jekyll.environment == 'production' -%}
   .bundle
