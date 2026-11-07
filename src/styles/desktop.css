@@ -1,0 +1,49 @@
+/* ---------- desktop: logo + links slide left, the CV panel rises on the right ---------- */
+@media (min-width: 901px) and (min-aspect-ratio: 1/1) {
+  :root {
+    --hero-x-open: -0.25;    /* left half's center: the panel's left edge is exactly 50vw */
+    --hero-y-open: 0.06;     /* same height as the landing view */
+    --hero-scale-open: 0.6;
+    --hero-dim: 0.1;
+    --links-top-open: 0.66;  /* clears the triangle's long lower tip (it extends well below its pivot) */
+    --panel-w: 0.5;          /* fraction of the viewport the panel covers (incl. its right margin) */
+  }
+
+  /* a floating card instead of a full-width sheet; still rises from the bottom */
+  .sheet {
+    left: auto;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    width: calc(100% * var(--panel-w) - 1rem);
+    border-radius: 28px;
+    box-shadow: 0 0 0 1px var(--sheet-line), 0 24px 80px var(--sheet-shadow);
+    transform: translateY(calc((1 - var(--p)) * (100% + 2rem + 120px)));
+  }
+
+  .sheet-inner { padding: clamp(1.5rem, 3.5vw, 3.5rem); padding-top: clamp(1.25rem, 2.5vw, 2.5rem); }
+
+  /* type sized for the narrower column */
+  .title { font-size: clamp(2.5rem, 4.6vw, 4.75rem); }
+  .intro { font-size: clamp(1.125rem, 1.65vw, 1.5rem); }
+
+  .timeline > li { grid-template-columns: 7.5rem 1fr; gap: 0 1rem; }
+  .timeline .what > ul { padding-left: 1rem; }
+
+  /* project rows: the tag moves under the description instead of taking a column */
+  .projects .row { grid-template-columns: 2.25rem 1fr 1.5rem; }
+  .projects .idx   { grid-area: 1 / 1; }
+  .projects .body  { grid-area: 1 / 2; }
+  .projects .arrow { grid-area: 1 / 3; align-self: start; }
+  .projects .tag   { grid-area: 2 / 2; margin-top: 0.6rem; }
+
+  /* the gradient is a quiet wash behind the content, anchored bottom-right, like on phones */
+  .sheet-glow {
+    top: auto;
+    bottom: -32%;
+    right: -38%;
+    width: 140%;
+    translate: none;
+  }
+  html.sheet-open .sheet-glow { opacity: calc(var(--glow-opacity) * 0.45); }
+}

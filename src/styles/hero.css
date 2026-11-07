@@ -1,0 +1,84 @@
+/* ---------- hero: blurred name behind the logo ---------- */
+:root {
+  /* Layout fractions: scene.js reads these too, so DOM and canvas can't drift apart. */
+  --hero-y-closed: 0.06;    /* logo + name sit this fraction of viewport height above center */
+  --hero-y-open: 0.39;      /* ...and this high while the sheet is open (center ~11% from top) */
+  --hero-scale-open: 0.3;
+  --hero-x-open: 0;         /* fraction of viewport width the hero slides sideways (negative = left) */
+  --hero-dim: 0.35;         /* how much the name fades while the sheet is open */
+  --links-top-closed: 0.77;
+  --links-top-open: 0.205;
+  --sheet-top: 0.27;        /* sheet's top edge, as a fraction of viewport height */
+  --p: 0;                   /* sheet progress 0..1, driven by sheet.js */
+
+  --sheet-bg: #ffffff;
+  --sheet-fg: #1c1917;
+  --sheet-muted: #78716c;
+  --sheet-line: rgba(28, 25, 23, 0.08);
+  --sheet-shadow: rgba(0, 0, 0, 0.06);
+  --name-blur: 5px;         /* final blur: still soft, like the logo art */
+  --name-opacity: 0.9;
+  --name-gradient: linear-gradient(90deg, #2f6df0 0%, #5a8cf5 30%, #8b7cf0 65%, #9b4dff 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --name-opacity: 0.85;
+
+    --sheet-bg: #1c1917;
+    --sheet-fg: #f5f5f4;
+    --sheet-muted: #a8a29e;
+    --sheet-line: rgba(245, 245, 244, 0.1);
+    --sheet-shadow: rgba(0, 0, 0, 0.5);
+    --name-gradient: linear-gradient(90deg, #5b9bff 0%, #a8dcef 22%, #e4e4f6 55%, #a98af0 85%, #7b5cf0 100%);
+  }
+}
+
+#stage { z-index: 1; }
+
+.hero {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  /* moves up and shrinks with the sheet (percent = fraction of viewport height) */
+  transform:
+    translateX(calc(100% * var(--hero-x-open) * var(--p)))
+    translateY(calc(-100% * (var(--hero-y-closed) + (var(--hero-y-open) - var(--hero-y-closed)) * var(--p))))
+    scale(calc(1 + (var(--hero-scale-open) - 1) * var(--p)));
+  opacity: calc(1 - var(--hero-dim) * var(--p));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.name {
+  margin: 0;
+  padding: 0 0.1em;
+  font-weight: 800;
+  font-size: clamp(3.5rem, 14.5vw, 17rem);
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+  white-space: nowrap;
+  user-select: none;
+
+  background: var(--name-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  opacity: 0;
+  filter: blur(28px);
+  transform: scale(1.08);
+  transition:
+    opacity 1.4s var(--ease-out-expo),
+    filter 1.9s var(--ease-out-expo),
+    transform 1.9s var(--ease-out-expo);
+  will-change: filter, opacity, transform;
+}
+
+html.name-in .name {
+  opacity: var(--name-opacity);
+  filter: blur(var(--name-blur));
+  transform: none;
+}

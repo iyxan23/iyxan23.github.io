@@ -1,0 +1,69 @@
+/* ---------- links ---------- */
+.links {
+  position: fixed;
+  left: calc(50% + 100% * var(--hero-x-open) * var(--p));
+  top: calc(100% * (var(--links-top-closed) + (var(--links-top-open) - var(--links-top-closed)) * var(--p)));
+  transform: translateX(-50%) scale(calc(1 - 0.15 * var(--p)));
+  z-index: 2;
+  width: min(92vw, 40rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem 2rem;
+  pointer-events: none;
+
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+html.is-settled .links a { pointer-events: auto; }
+
+.links a {
+  position: relative;
+  padding: 0.35rem 0;
+  color: var(--muted);
+  text-decoration: none;
+
+  opacity: 0;
+  transform: translateY(10px);
+  filter: blur(4px);
+  transition:
+    opacity 0.9s var(--ease-out-expo),
+    transform 0.9s var(--ease-out-expo),
+    filter 0.9s var(--ease-out-expo),
+    color 0.25s ease;
+  transition-delay: calc(var(--i) * 90ms), calc(var(--i) * 90ms), calc(var(--i) * 90ms), 0s;
+}
+
+html.is-settled .links a {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s var(--ease-out-expo);
+}
+
+.links a:hover,
+.links a:focus-visible { color: var(--fg); outline: none; }
+
+.links a:hover::after,
+.links a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+
+@media (prefers-reduced-motion: reduce) {
+  .name { transform: none; transition-duration: 0.5s; }
+  .links a { transform: none; transition-duration: 0.5s; }
+}

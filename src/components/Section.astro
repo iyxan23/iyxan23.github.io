@@ -1,0 +1,16 @@
+---
+export interface Props {
+  title: string;
+  variant?: 'timeline' | 'projects' | 'rows';
+  index: number;
+  compact?: boolean;
+  skills?: boolean;
+}
+const { title, variant = 'timeline', index, compact = false, skills = false } = Astro.props;
+const classes = ['block', 'reveal', ...(compact ? ['compact'] : []), ...(skills ? ['skills'] : [])];
+---
+
+<section class={classes.join(' ')} style={`--d:${index}`}>
+  <slot name="heading" />
+  <slot />
+</section>

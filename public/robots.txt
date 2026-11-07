@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nurihsanag.id/sitemap-index.xml

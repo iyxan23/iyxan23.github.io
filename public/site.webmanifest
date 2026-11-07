@@ -1,0 +1,21 @@
+{
+  "name": "Nur Ihsan Al Ghifari",
+  "short_name": "iyxan23",
+  "description": "Nur Ihsan Al Ghifari (aka iyxan23): full-stack and backend engineer from Indonesia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}

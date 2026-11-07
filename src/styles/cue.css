@@ -1,0 +1,59 @@
+/* ---------- scroll cue ---------- */
+.cue {
+  position: fixed;
+  left: 50%;
+  bottom: max(1rem, calc(env(safe-area-inset-bottom) + 0.5rem));
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  /* hidden until the intro has settled, and again while the sheet is up */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 10px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    visibility 0s linear 0.35s;
+}
+
+html.is-settled:not(.sheet-open) .cue {
+  opacity: 0.7;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+  transition:
+    opacity 1s ease 0.8s,
+    transform 1.1s var(--ease-out-expo) 0.8s,
+    visibility 0s;
+}
+
+.cue:hover,
+.cue:focus-visible { color: var(--fg); outline: none; }
+
+.cue svg {
+  display: block;
+  animation: cue-bump 2.4s ease-in-out infinite;
+  animation-play-state: paused; /* only runs while it can be seen */
+}
+
+html.is-settled:not(.sheet-open) .cue svg { animation-play-state: running; }
+
+@keyframes cue-bump {
+  0%, 100% { transform: translateY(2px); }
+  50%      { transform: translateY(-5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cue svg { animation: none; }
+}

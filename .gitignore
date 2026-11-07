@@ -1,26 +1,69 @@
-# Bundler cache
-.bundle
-vendor
-Gemfile.lock
+*.crt
+*.key
+*.keystore
+*.pem
+*.secret
+*.token
+*_keys
+*_secrets
+*_tokens
+.env
+.env.*
+.env.*.local
+.env.local
+id_dsa
+id_rsa
 
-# Jekyll cache
-.jekyll-cache
-.jekyll-metadata
-_site
+*.tar.gz
+*.zip
+dist/
 
-# RubyGems
-*.gem
+*.tsbuildinfo
+.cache/
+.yarn-integrity
+.yarn/build-state.yml
+.yarn/cache
+.yarn/install-state.gz
+.yarn/unplugged
+.yarn/versions/
+build/
+node_modules/
 
-# NPM dependencies
-node_modules
-package-lock.json
+*.log
+*.log.*
+.eslintcache
+.grunt
+.lock-wscript
+.node_repl_history
+.npm-debug.log*
+.parcel-cache/
+.pnpm-debug.log*
+.rpt2_cache/
+.tern-port
+.tscache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# IDE configurations
-.idea
-.vscode
-!.vscode/settings.json
-!.vscode/extensions.json
+.my-app*
+/.changelog
+lib/
+out/
+spec-reports
+template/src/__tests__/__snapshots__/
 
-# Misc
-_sass/dist
-assets/js/dist
+.coverage
+.coverage.*
+.coverage.xml
+.coverage_html/
+.nyc_output/
+coverage-reports
+coverage/
+htmlcov/
+junit.xml
+test-output/
+test-reports
+test-reports/
+test-results/
+testng-results.xml
+.astro

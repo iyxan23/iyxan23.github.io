@@ -1,0 +1,106 @@
+---
+import { loadContent } from '../lib/content';
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-500.css';
+import '@fontsource/inter/latin-600.css';
+import '@fontsource/inter/latin-700.css';
+import '@fontsource/inter/latin-800.css';
+import '@fontsource/jetbrains-mono/latin-500.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  interactive?: boolean;
+  showPersonJsonLd?: boolean;
+}
+
+const {
+  title,
+  description,
+  interactive = true,
+  showPersonJsonLd = true,
+} = Astro.props;
+
+const vm = loadContent();
+
+const url = new URL(Astro.request.url);
+const canonicalUrl = `${url.origin}${url.pathname === '/' ? '/' : url.pathname}`;
+const pageTitle = title ?? vm.seo.title;
+const pageDescription = description ?? vm.seo.description;
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: vm.name,
+  jobTitle: 'Software Engineer',
+  url: `${url.origin}/`,
+  email: vm.emailUrl,
+  sameAs: vm.links.filter((l) => l.verified).map((l) => l.href),
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Surakarta',
+    addressCountry: 'ID',
+  },
+  knowsAbout: ['TypeScript', 'Go', 'Rust', 'Next.js', 'PostgreSQL', 'Docker'],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{pageTitle}</title>
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="description" content={pageDescription} />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0c0a09" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Nur Ihsan Al Ghifari" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+
+    {showPersonJsonLd && <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />}
+    <slot name="head" />
+  </head>
+  <body>
+    {interactive && (
+      <div id="loader" role="status" aria-label="Loading">
+        <div class="loader-body">
+          <svg class="loader-ring" viewBox="0 0 48 48" aria-hidden="true">
+            <circle class="track" cx="24" cy="24" r="18" />
+            <circle class="arc" cx="24" cy="24" r="18" />
+          </svg>
+        </div>
+      </div>
+    )}
+    <slot />
+    {interactive && (
+      <script>
+        import '../scripts/main.ts';
+      </script>
+    )}
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/tokens.css';
+  @import '../styles/base.css';
+  @import '../styles/loader.css';
+  @import '../styles/hero.css';
+  @import '../styles/links.css';
+  @import '../styles/sheet.css';
+  @import '../styles/content.css';
+  @import '../styles/glow.css';
+  @import '../styles/cue.css';
+  @import '../styles/desktop.css';
+  @import '../styles/note.css';
+</style>

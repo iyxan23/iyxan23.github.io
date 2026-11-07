@@ -1,0 +1,10 @@
+---
+export interface Props {
+  handle: string;
+}
+const { handle } = Astro.props;
+---
+
+<div class="hero">
+  <h1 class="name">{handle}.</h1>
+</div>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <clipPath id="circle"><circle cx="100" cy="100" r="100"/></clipPath>
+    <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(100 100) rotate(90) scale(100)">
+      <stop stop-color="#5B23EA"/>
+      <stop offset="0.66875" stop-color="#1B75F9"/>
+    </radialGradient>
+    <style>
+      .mark-light { display: block; }
+      .mark-dark { display: none; }
+      @media (prefers-color-scheme: dark) {
+        .mark-light { display: none; }
+        .mark-dark { display: block; }
+      }
+    </style>
+  </defs>
+  <g clip-path="url(#circle)">
+    <g class="mark-light">
+      <rect width="200" height="200" fill="#ffffff"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M78.5 39L163.5 45.5L47.5 155L78.5 39Z" fill="url(#g)"/>
+    </g>
+    <g class="mark-dark">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="m 78.5,39 85,6.5 -116,109.5 z" fill="#ffffff"/>
+    </g>
+  </g>
+</svg>

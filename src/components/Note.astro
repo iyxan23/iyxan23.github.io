@@ -1,0 +1,21 @@
+---
+export interface Props {
+  note: { head?: string; body: string; tags: string[] };
+}
+const { note } = Astro.props;
+---
+
+<aside class="note" aria-hidden="true">
+  <svg class="note-line" aria-hidden="true">
+    <path class="note-path" d="" />
+    <circle class="note-ring" r="7" cx="0" cy="0" />
+    <circle class="note-dot" r="2.5" cx="0" cy="0" />
+  </svg>
+  <div class="note-box">
+    {note.head && <p class="note-head" style="margin:0 0 .4rem;font-weight:600;font-size:.8125rem">{note.head}</p>}
+    <p class="note-text">{note.body}</p>
+    {note.tags.length > 0 && (
+      <p class="note-tags" style="margin:.5rem 0 0;font-size:.75rem;opacity:.75">{note.tags.join(' · ')}</p>
+    )}
+  </div>
+</aside>

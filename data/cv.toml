@@ -1,0 +1,447 @@
+# ============================================================================
+# cv.toml : the ONLY place CV content lives. Layout is in cv.tex.
+#
+# Inline markup in any text field:  **bold**  *italic*  `code`  [label](url)
+# LaTeX special characters (& % $ # _) are escaped for you, just type them.
+# Dates must be quoted strings: "2024-11", "2026-09-19", "2022", "present".
+#
+# Languages: the first language under [languages] (en) is the default and its
+# text is the plain key. Another language's text sits right beside it as
+# `<key>_<code>`:   title = "Skills"   /   title_id = "Keahlian"
+# Lists work the same way: `bullets` / `bullets_id` (same length and order;
+# priorities are read from the English list). Anything without a translation
+# falls back to English. Run `./build.py --missing` to see what is left.
+# Names, URLs and dates need no translation (months come from [languages]).
+#
+# priority (on any item, section, or bullet; default 1):
+#   1 = essential   2 = nice to have   3 = only on the full CV
+# Each variant below keeps everything with priority <= its max_priority.
+# Items appear in the order written here. Reorder freely.
+# ============================================================================
+
+# Output: dist/<variant filename><language suffix>.pdf
+[variants.full]
+max_priority = 3
+filename = "Nur-Ihsan-Al-Ghifari-CV"
+
+[variants.short]
+max_priority = 1
+filename = "Nur-Ihsan-Al-Ghifari-CV-short"
+
+[languages.en]
+babel = "english"
+present = "Present"
+months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+[languages.id]
+suffix = "-id"                                 # -> Nur-Ihsan-Al-Ghifari-CV-id.pdf
+babel = "indonesian"
+present = "Sekarang"
+months = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"]
+
+# ----------------------------------------------------------------------------
+[meta]
+name = "Nur Ihsan Al Ghifari"
+tagline = "Software Engineer · Computer Science Undergraduate"
+tagline_id = "Software Engineer · Mahasiswa Teknik Informatika"
+contacts = [
+  { text = "Surakarta, Indonesia\n" },
+  { text = "hi@nurihsanag.id", url = "mailto:hi@nurihsanag.id" },
+  # { text = "REDACTED", url = "tel:REDACTED" },
+  { text = "in/nurihsanag", url = "https://www.linkedin.com/in/nurihsanag" },
+  { text = "github.com/iyxan23", url = "https://github.com/iyxan23" },
+  { text = "nurihsanag.id", url = "https://nurihsanag.id" },
+]
+
+# ----------------------------------------------------------------------------
+# Sections render in this order. Types: "text", "entries", "rows".
+# Set enabled = false to hide a section without deleting it.
+
+[[section]]
+type = "text"
+title = ""                                     # empty title = no heading
+text = """
+Full-stack and backend engineer working with **TypeScript, Next.js, Go and PostgreSQL**, \
+programming since age 10. Most drawn to systems internals (compilers, runtimes, low-level \
+tooling) and to connecting that thinking with product architecture.
+"""
+text_id = """
+Engineer full-stack dan backend yang bekerja dengan **TypeScript, Next.js, Go, dan PostgreSQL**, \
+memprogram sejak usia 10 tahun. Paling tertarik pada internal sistem (compiler, runtime, tooling \
+low-level) dan pada menghubungkan cara berpikir itu dengan arsitektur produk.
+"""
+
+# ----------------------------------------------------------------Experience
+[[section]]
+type = "entries"
+title = "Experience"
+title_id = "Pengalaman"
+
+  [[section.item]]
+  title = "Backend Engineer"
+  org = "Sketchub"
+  where = "Remote, International"
+  where_id = "Remote, Internasional"
+  start = "2024-11"
+  end = "2026-03"
+  bullets = [
+    "Rewrote the legacy PHP backend in **Go** for an international developer community platform.",
+    "Developed with Gin and PostgreSQL, adhered to Clean Architecture to ensure maintainability and scalability.",
+  ]
+  bullets_id = [
+    "Menulis ulang backend PHP lama ke **Go** untuk platform komunitas developer internasional.",
+    "Menggunakan Gin dan PostgreSQL, mengikuti Clean Architecture memastikan maintainability dan scalability.",
+  ]
+
+  [[section.item]]
+  title = "Backend Engineer"
+  org = "Octaxy Team"
+  where = "Remote, Indonesia"
+  start = "2025-02"
+  end = "2026-02"
+  bullets = [
+    "Developed the backend for a government-commissioned project with **NestJS** and **Directus CMS**.",
+  ]
+  bullets_id = [
+    "Mengembangkan backend untuk proyek pemerintah dengan **NestJS** dan **Directus CMS**.",
+  ]
+
+  [[section.item]]
+  title = "Software Engineer"
+  org = "Yayasan Makarima"
+  where = "Hybrid, Kartasura"
+  start = "2025-06"
+  end = "2026-02"
+  bullets = [
+    "Developed an end-to-end Point-of-Sale featuring inventory management, sales, and reporting with **Next.js**.",
+    "Deployed and maintained a Debian Linux server with Docker and nginx for hosting.",
+    "Handled a total of over 500k+ transactions for a year of use in multiple stores.",
+  ]
+  bullets_id = [
+    "Mengembangkan sistem Point-of-sale untuk manajemen inventaris, penjualan, dan pelaporan dengan **Next.js**.",
+    "Mengelola server Debian Linux dengan Docker dan nginx untuk hosting.",
+    "Telah memproses lebih dari 500rb+ total transaksi selama setahun untuk beberapa toko.",
+  ]
+
+  [[section.item]]
+  title = "IT Instructor"
+  title_id = "Instruktur TI"
+  org = "Alhazen Academy"
+  where = "On-site, Sukoharjo"
+  start = "2024-07"
+  end = "2024-11"
+  priority = 2
+  bullets = [
+    "Thunkable instructor for high-school students, teaching app development and programming fundamentals.",
+    "Delivered 14 sessions of interactive lessons, covering topics such as UI/UX design, logic flow, and app deployment.",
+  ]
+  bullets_id = [
+    "Instruktur Thunkable untuk siswa SMA, mengajarkan pengembangan aplikasi dan dasar-dasar pemrograman.",
+    "Menyampaikan 14 sesi pembelajaran interaktif, mencakup topik seperti desain UI/UX, alur logika, dan deployment aplikasi.",
+  ]
+
+  [[section.item]]
+  title = "Android & Backend Developer (Contributor)"
+  org = "Sketchub"
+  where = "Remote, International"
+  where_id = "Remote, Internasional"
+  start = "2021-11"
+  end = "2022-06"
+  priority = 3
+  bullets = [
+    "Early community contribution: a tool that scans Sketchware projects for malicious content in Python.",
+    "Contributed to the app development, including bug fixes and new features.",
+  ]
+  bullets_id = [
+    "Kontribusi awal komunitas: alat pemindai Sketchware untuk mendeteksi konten berbahaya dalam Python.",
+    "Turut membantu mengembangkan fitur aplikasi dan memperbaiki bug yang ada.",
+  ]
+
+# ----------------------------------------------------------------- Education
+[[section]]
+type = "entries"
+title = "Education"
+title_id = "Pendidikan"
+
+  [[section.item]]
+  title = "Universitas Muhammadiyah Surakarta"
+  title_id = "Universitas Muhammadiyah Surakarta"
+  org = "Sarjana Teknik Informatika (S.Kom; Computer Science), GPA: 3.85/4.00"
+  org_id = "Sarjana Teknik Informatika (S.Kom), IPK: 3.85/4.00"
+  where = "Surakarta"
+  when = "Aug 2025 -- Aug 2029 (expected)"
+  when_id = "Agu 2025 -- Agu 2029 (perkiraan)"
+
+  [[section.item]]
+  title = "IDN Boarding School"
+  title_id = "IDN Boarding School"
+  org = "Vocational High School, Computer Software Engineering"
+  org_id = "SMK, Rekayasa Perangkat Lunak"
+  start = "2022-05"
+  end = "2025-06"
+  priority = 2
+
+# ------------------------------------------------------------------ Projects
+[[section]]
+type = "entries"
+title = "Selected Projects"
+title_id = "Proyek Pilihan"
+
+  [[section.item]]
+  title = "zipalign-java"
+  url = "https://github.com/iyxan23/zipalign-java"
+  org = "Open-source library · 74 GitHub stars · used to fix a Sketchware Pro build issue"
+  org_id = "Open-source library · 74 GitHub stars · dipakai untuk memperbaiki masalah build Sketchware Pro"
+  date = "2022"
+  bullets = [
+    "Re-implemented Android's `zipalign` as a dependency-free Java library (plus CLI, published via JitPack) after the native binary failed on some devices.",
+  ]
+  bullets_id = [
+    "Mengimplementasikan ulang `zipalign` Android sebagai library Java tanpa dependensi (beserta CLI, dipublikasikan lewat JitPack) setelah binary native-nya gagal berjalan di beberapa perangkat.",
+  ]
+
+  [[section.item]]
+  title = "Paring"
+  org = "Founding Developer · selected for PIK P2MW UMS internal student venture funding"
+  org_id = "Founding Developer · lolos seleksi internal pendanaan Program Inovasi Kewirausahaan (PIK) P2MW UMS"
+  date = "2026-02"
+
+  [[section.item]]
+  title = "Rafflesia"
+  url = "https://github.com/iyxan23/rafflesia"
+  org = "Open source · Rust"
+  date = "2022-03"
+  priority = 3
+  bullets = [
+    "Architected a compiler pipeline featuring a custom lexer, parser, and AST generator for a DSL.",
+    "Designed a backend code generation engine to emit structured target files from validated abstract syntax trees."
+  ]
+  bullets_id = [
+    "Mengembangkan pipeline compiler yang mencakup lexer, parser, dan generator AST untuk bahasa DSL.",
+    "Mendesain engine backend untuk menghasilkan file target terstruktur dari abstract syntax tree yang tervalidasi."
+  ]
+
+  [[section.item]]
+  title = "Blokkok (OpenBlocks)"
+  url = "https://github.com/Blokkok/blokkok"
+  org = "Open-source Android app · Kotlin · main developer"
+  org_id = "Aplikasi Android open source · Kotlin · developer utama"
+  date = "2021"
+  priority = 2
+  bullets = [
+    "Led a rewrite of an on-device, Scratch-style block programming app for Android",
+    "Built the project manager, a microkernel-style modular plugin system, and a custom canvas view for rendering, panning and dragging blocks.",
+  ]
+  bullets_id = [
+    "Memimpin penulisan ulang aplikasi pemrograman blok bergaya Scratch yang berjalan langsung di Android, dengan devlog publik selama pengerjaan.",
+    "Membangun pengelola proyek, sistem plugin modular berbasis microkernel, dan view kanvas kustom untuk merender, menggeser, dan menyeret blok.",
+  ]
+
+  [[section.item]]
+  title = "swrs"
+  url = "https://github.com/iyxan23/swrs"
+  org = "Open source · Rust"
+  org_id = "Open source · Rust"
+  date = "2021-10"
+  priority = 3
+  text = "Rust library that parses, edits and reconstructs Sketchware projects. Published on crates.io"
+  text_id = "Library Rust untuk mem-parse, mengedit, dan merekonstruksi proyek Sketchware. Dipublikasikan di crates.io"
+
+  [[section.item]]
+  title = "Asperge"
+  url = "https://github.com/Iyxan23/asperge"
+  org = "Open source · Kotlin"
+  org_id = "Open source · Kotlin"
+  date = "2021-07"
+  priority = 2
+  text = "JVM tool that extracts Sketchware projects, decrypts its files and generates Java+XML source code from them."
+  text_id = "Alat JVM untuk mengekstrak proyek Sketchware, decrypt file, dan menghasilkan kode sumber Java dan XML."
+
+# -------------------------------------------------------------------- Awards
+[[section]]
+type = "rows"
+title = "Awards & Competitions"
+title_id = "Penghargaan & Kompetisi"
+label_width = "2.3cm"
+
+  [[section.item]]
+  date = "2026-09"
+  text = "**Finalist**, PIN UNILA National Essay Competition (10th of 162)"
+  text_id = "**Finalis**, Kompetisi Esai Nasional PIN UNILA (peringkat 10 dari 162)"
+
+  [[section.item]]
+  date = "2026-06"
+  text = "**4th Place**, ESTETIC National Scientific Writing Competition (Eksyar, Season 2)"
+  text_id = "**Juara Harapan 1**, Lomba Karya Tulis Ilmiah Nasional ESTETIC (Eksyar, Season 2)"
+
+  [[section.item]]
+  date = "2026-05"
+  text = "**3rd Place**, Dentistry Debate Competition 2026 held by DPM FKG UMS"
+  text_id = "**Juara 3**, Lomba Denistry Debate 2026 oleh DPM FKG UMS"
+  priority = 2
+
+  [[section.item]]
+  date = "2026-02"
+  text = "**2nd Place**, LCC IMM FT Averroes UMS"
+  text_id = "**Juara 2**, LCC IMM FT Averroes UMS"
+  priority = 3
+
+  [[section.item]]
+  date = "2024-05"
+  text = "**5th Place**, Indonesian Robotics Tournament, MPR RI Chairman's Cup 2024 (creative innovation)"
+  text_id = "**Juara 5**, Turnamen Robotik Indonesia Piala Ketua MPR RI 2024 (kategori kreasi inovatif)"
+
+  [[section.item]]
+  date = "2022-09"
+  text = "**3rd Place**, Web Development, IDN ITFEST National Webdev Competition 2022 (*Prognosis*)"
+  text_id = "**Juara 3**, Lomba Pengembangan Web, IDN ITFEST National Webdev Competition 2022 (*Prognosis*)"
+
+  [[section.item]]
+  date = "2022"
+  text = "**3rd Place**, English News Anchor, AAIIBS Got Talent 2022"
+  priority = 3
+
+  [[section.item]]
+  date = "2020"
+  text = "**Silver Medal**, International Science Technology Engineering Competition (ISTEC) 2020"
+  text_id = "**Medali Perak**, International Science Technology Engineering Competition (ISTEC) 2020"
+  priority = 2
+
+# ---------------------------------------------------------------- Leadership
+[[section]]
+type = "rows"
+title = "Leadership & Community"
+title_id = "Kepemimpinan & Komunitas"
+label_width = "2.3cm"
+
+  [[section.item]]
+  date = "2026"
+  text = "**Creative Team Lead**, PENA 8.0 National Essay Competition & Seminar (UKM PRISMA UMS)"
+  text_id = "**Koordinator Sie PDD**, PENA 8.0 Kompetisi Esai Nasional & Seminar (UKM PRISMA UMS)"
+
+  [[section.item]]
+  date = "2026"
+  text = "**Creative Team Lead**, FOSTIFEST 2026 National Programming Competition (UKM FOSTI UMS)"
+  text_id = "**Koordinator Sie Karya**, FOSTIFEST 2026 Kompetisi Pemrograman Nasional (UKM FOSTI UMS)"
+
+  [[section.item]]
+  date = "2026"
+  text = "**Website Development Team**, Masjid UMS"
+  text_id = "**Tim Pengembangan Website**, Masjid UMS"
+  priority = 2
+
+  [[section.item]]
+  date = "2025-12"
+  text = "**Joined** UKM PRISMA (research & student achievement) and UKM FOSTI (open source) at UMS; named PRISMA **Best Member**, May 2026"
+  text_id = "**Anggota** UKM PRISMA (riset & prestasi mahasiswa) dan UKM FOSTI (open source) di UMS; dinobatkan sebagai **Anggota Terbaik** PRISMA, Mei 2026"
+
+  [[section.item]]
+  date = "2023-05"
+  text = "Elected as **Secretary**, Student Council of SMK IDN Boarding School 2023-2024"
+  text_id = "Terpilih sebagai **Sekretaris**, ISSC (aka OSIS) SMK IDN Boarding School 2023-2024"
+  priority = 2
+
+# ------------------------------------------------------------------ Speaking
+[[section]]
+type = "rows"
+title = "Speaking & Teaching"
+title_id = "Pembicara & Pengajaran"
+priority = 2
+label_width = "2.3cm"
+
+  [[section.item]]
+  date = "2026-09-16"
+  text = "**Speaker**, HIMATIF Gathering Informatika 2026"
+  text_id = "**Narasumber**, HIMATIF Gathering Informatika 2026"
+  priority = 1
+
+  [[section.item]]
+  date = "2026-04-11"
+  text = "**Speaker**, FOSTECH Camp Web Development Bootcamp held by FOSTI UMS"
+  text_id = "**Pembicara**, Bootcamp Web Development FOSTECH Camp oleh FOSTI UMS"
+  priority = 1
+
+  [[section.item]]
+  date = "2026-09-14"
+  text = "**Moderator**, HIMAKOM Design Program 2026 held by UKM HIMAKOM UMS"
+  text_id = "**Moderator**, HIMAKOM Design Program 2026 oleh UKM HIMAKOM UMS"
+  priority = 2
+
+  [[section.item]]
+  date = "2026-06-04"
+  text = "**MC**, ETP Social Gathering held by LPMB UMS (televised)"
+  text_id = "**MC**, ETP Social Gathering oleh LPMB UMS (disiarkan di televisi)"
+  priority = 1
+
+  [[section.item]]
+  date = "2023-11"
+  text = "**Instructor** (IDN Mengajar), Kolej Vokasional Perdagangan Johor Bahru, Malaysia (Tailwind CSS)"
+  text_id = "**Instruktur** (IDN Mengajar), Kolej Vokasional Perdagangan Johor Bahru, Malaysia (Tailwind CSS)"
+  priority = 1
+
+  [[section.item]]
+  date = "2023-09"
+  text = "**Instructor** (IDN Mengajar), SD Makarima, Kartasura (Scratch)"
+  text_id = "**Instruktur** (IDN Mengajar), SD Makarima, Kartasura (Scratch)"
+  priority = 3
+
+  [[section.item]]
+  date = "2023-01"
+  text = "**Instructor** (IDN Mengajar), MIT SaQu At-Ta'allumu Ma'an, Madiun (Figma)"
+  text_id = "**Instruktur** (IDN Mengajar), MIT SaQu At-Ta'allumu Ma'an, Madiun (Figma)"
+  priority = 3
+
+  [[section.item]]
+  date = "2023-01"
+  text = "**Instructor** (IDN Mengajar), SMP Al Azhar 21, Solo Baru (Figma)"
+  text_id = "**Instruktur** (IDN Mengajar), SMP Al Azhar 21, Solo Baru (Figma)"
+  priority = 3
+
+# -------------------------------------------------------------------- Skills
+[[section]]
+type = "rows"
+title = "Skills"
+title_id = "Keahlian"
+label_width = "3.0cm"
+
+  [[section.item]]
+  label = "Languages"
+  label_id = "Pemrograman"
+  text = "TypeScript, Go, Rust; also Java, Kotlin, Python, PHP, Dart"
+  text_id = "TypeScript, Go, Rust; juga Java, Kotlin, Python, PHP, Dart"
+
+  [[section.item]]
+  label = "Web"
+  text = "Next.js, Tailwind CSS"
+  text_id = "Next.js, Tailwind CSS"
+
+  [[section.item]]
+  label = "Mobile"
+  text = "Android (Java/Kotlin), Flutter"
+  text_id = "Android (Java/Kotlin), Flutter"
+  priority = 2
+
+  [[section.item]]
+  label = "Backend & Infra"
+  label_id = "Backend & Infra"
+  text = "PostgreSQL, Docker, Podman, Google Cloud (GCP)"
+  text_id = "PostgreSQL, Docker, Podman, Google Cloud (GCP)"
+
+  [[section.item]]
+  label = "Tooling"
+  text = "Linux, Neovim, Git, Figma"
+  text_id = "Linux, Neovim, Git, Figma"
+  priority = 2
+
+  [[section.item]]
+  label = "Interests"
+  label_id = "Minat"
+  text = "Web Infrastructure, Developer Tooling, Compilers, JVM/runtime internals"
+  text_id = "Infrastruktur Web, Developer Tooling, Compiler, internal JVM/runtime"
+  priority = 2
+
+  [[section.item]]
+  label = "Spoken"
+  label_id = "Bahasa"
+  text = "Indonesian (native); English (TOEP 900/990, equivalent to C1, Aug 2026)"
+  text_id = "Bahasa Indonesia (native); Bahasa Inggris (TOEP 900/990, setara C1, Agu 2026)"

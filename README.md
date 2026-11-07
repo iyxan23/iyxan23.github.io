@@ -1,61 +1,23 @@
-# Chirpy Starter
+<h1>
+<pre>nurihsanag.id</pre>
+</h1>
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+Static Astro site (SSG, `output: 'static'`) rendered from TOML. The site and the CV share one source of CV content.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+## Updating content
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+1. Edit `data/cv.toml` (CV content) or `data/site.toml` (site-only: handle, links, note, featured project tags/URLs, SEO).
+2. Rebuild: `pnpm build` (or `pnpm dev` for local preview).
+3. Deploy `dist/` to Cloudflare Pages or GitHub Pages (no adapter).
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+Environment: `CV_TOML_PATH` overrides the CV path (default `./data/cv.toml` in repo root).
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
-```
+## Scripts
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+- `pnpm dev` — dev server
+- `pnpm build` — static build to `dist/`
+- `pnpm check` — breakpoint-literal, class-contract, reveal-order, whitelist/privacy checks (see `tests/check.mjs`)
 
-## Prerequisites
+## Bundle
 
-Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of
-the basic environment. [Git](https://git-scm.com/) also needs to be installed.
-
-## Installation
-
-Sign in to GitHub and [**use this template**][use-template] to generate a brand new repository and name it
-`USERNAME.github.io`, where `USERNAME` represents your GitHub username.
-
-Then clone it to your local machine and run:
-
-```console
-$ bundle
-```
-
-## Usage
-
-Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
-
-## Contributing
-
-The contents of this repository are automatically updated when new releases are made to the [main repository][chirpy].  
-If you have problems using it, or would like to participate in improving it, please go to the main repository for feedback!
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[use-template]: https://github.com/cotes2020/chirpy-starter/generate
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+~900K `dist/` total, most of it three.js + self-hosted fonts (Inter 400–800 latin, JetBrains Mono 500 latin). No CDN or render-blocking third-party requests at runtime.

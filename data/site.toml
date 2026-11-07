@@ -1,0 +1,55 @@
+handle = "iyxan23"
+eyebrow = "Software engineer · Surakarta, Indonesia"
+
+[[links]]
+label = "GitHub"
+href = "https://github.com/iyxan23"
+verified = true
+[[links]]
+label = "Blog"
+href = "https://blog.nurihsanag.id"
+verified = true
+[[links]]
+label = "Instagram"
+href = "https://instagram.com/nurihsanag"
+verified = true
+[[links]]
+label = "LinkedIn"
+href = "https://linkedin.com/in/nurihsanag"
+verified = true
+
+[note]
+body = "iyxan23 is an internet pseudonym I’ve used ever since 2020. This triangle was first made in GIMP, and I’ve kept it as my pseudonym’s profile picture up until now."
+
+[[featured]]
+match = "zipalign-java"
+tag = "2022 · 74 stars"
+href = "https://github.com/iyxan23/zipalign-java"
+verified = true
+[[featured]]
+match = "Paring"
+tag = "Feb 2026"
+[[featured]]
+match = "Rafflesia"
+tag = "Mar 2022 · Rust"
+href = "https://github.com/iyxan23/rafflesia"
+verified = false
+[[featured]]
+match = "Blokkok"
+tag = "2021 · Kotlin"
+href = "https://github.com/Blokkok/blokkok"
+verified = false
+[[featured]]
+match = "swrs"
+tag = "Oct 2021 · Rust"
+href = "https://github.com/iyxan23/swrs"
+verified = false
+[[featured]]
+match = "Asperge"
+tag = "Jul 2021 · Kotlin"
+href = "https://github.com/Iyxan23/asperge"
+verified = false
+
+[seo]
+title = "Nur Ihsan Al Ghifari"
+description = "Nur Ihsan Al Ghifari (aka iyxan23): full-stack and backend engineer from Indonesia."

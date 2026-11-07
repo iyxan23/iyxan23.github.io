@@ -1,0 +1,62 @@
+/* ---------- bottom sheet ---------- */
+html { touch-action: none; } /* closed: swipes are ours, not the browser's */
+
+html.sheet-open #scene { cursor: pointer; } /* click the small logo to go back */
+
+.sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: calc(100% * var(--sheet-top));
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  background: var(--sheet-bg);
+  color: var(--sheet-fg);
+  border-radius: 28px 28px 0 0;
+  box-shadow: 0 -1px 0 var(--sheet-line), 0 -24px 80px var(--sheet-shadow);
+
+  /* fully off-screen at p = 0 (the extra 120px hides the shadow too) */
+  transform: translateY(calc((1 - var(--p)) * (100% + 120px)));
+  will-change: transform;
+}
+
+.sheet-handle {
+  flex: none;
+  width: 2.5rem;
+  height: 4px;
+  margin: 0.75rem auto 0;
+  border-radius: 4px;
+  background: var(--sheet-fg);
+  opacity: 0.15;
+}
+
+.sheet-scroll {
+  /* Edge fades: --ft / --fb are set by sheet.js from the scroll position.
+     At the very top --ft is 0, so no fade shows until you've actually scrolled. */
+  --ft: 0px;
+  --fb: 0px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 var(--ft), #000 calc(100% - var(--fb)), transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 var(--ft), #000 calc(100% - var(--fb)), transparent 100%);
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  scrollbar-width: thin;
+  outline: none;
+}
+
+.sheet-inner {
+  padding: clamp(2rem, 5vw, 4.5rem) clamp(1.5rem, 6vw, 5rem) clamp(3rem, 8vw, 6rem);
+}
+
+/* left column only: the right side stays free for the revolving gradient */
+.content {
+  max-width: 46rem;
+}

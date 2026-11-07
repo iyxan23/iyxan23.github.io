@@ -1,0 +1,146 @@
+---
+import type { TimelineItem, ProjectItem, RowItem } from '../lib/content';
+
+export interface Props {
+  vm: {
+    eyebrow: string;
+    name: string;
+    intro: string;
+    email: string;
+    emailUrl: string;
+    year: number;
+    experience: TimelineItem[];
+    projects: ProjectItem[];
+    education: TimelineItem[];
+    awards: RowItem[];
+    leadership: RowItem[];
+    speaking: RowItem[];
+    skills: RowItem[];
+  };
+}
+const { vm } = Astro.props;
+---
+
+<article class="content">
+  <p class="eyebrow reveal" style="--d:0">{vm.eyebrow}</p>
+
+  <h2 class="title reveal" style="--d:1">{vm.name}<span class="dot">.</span></h2>
+
+  <p class="intro reveal" style="--d:2">{vm.intro}</p>
+
+  <section class="block reveal" style="--d:4">
+    <h3 class="eyebrow">Experience</h3>
+    <ul class="timeline">
+      {vm.experience.map((it) => (
+        <li>
+          <span class="when">{it.when}</span>
+          <span class="what">
+            <span class="role">{it.role}</span>
+            {it.org && <span class="org">{it.org}</span>}
+            {(it.bullets?.length ?? 0) > 0 && (
+              <ul>
+                {it.bullets!.map((b) => <li>{b}</li>)}
+              </ul>
+            )}
+          </span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="block reveal" style="--d:5">
+    <h3 class="eyebrow">Selected projects</h3>
+    <ul class="projects">
+      {vm.projects.map((p, i) => {
+        const idx = String(i + 1).padStart(2, '0');
+        return (
+          <li>
+            {p.href ? (
+              <a class="row" href={p.href} target="_blank" rel="noopener noreferrer">
+                <span class="idx">{idx}</span>
+                <span class="body"><span class="p-name">{p.name}</span><span class="desc">{p.desc}</span></span>
+                <span class="tag">{p.tag}</span>
+                <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            ) : (
+              <div class="row is-static">
+                <span class="idx">{idx}</span>
+                <span class="body"><span class="p-name">{p.name}</span><span class="desc">{p.desc}</span></span>
+                <span class="tag">{p.tag}</span>
+                <span class="arrow" aria-hidden="true"></span>
+              </div>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+
+  <section class="block reveal" style="--d:6">
+    <h3 class="eyebrow">Education</h3>
+    <ul class="timeline">
+      {vm.education.map((it) => (
+        <li>
+          <span class="when">{it.when}</span>
+          <span class="what">
+            <span class="role">{it.role}</span>
+            {it.org && <span class="org">{it.org}</span>}
+          </span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="block reveal" style="--d:7">
+    <h3 class="eyebrow">Awards &amp; competitions</h3>
+    <ul class="timeline compact">
+      {vm.awards.map((it) => (
+        <li>
+          <span class="when">{it.when}</span>
+          <span class="what"><span class="role">{it.role}</span></span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="block reveal" style="--d:8">
+    <h3 class="eyebrow">Leadership &amp; community</h3>
+    <ul class="timeline compact">
+      {vm.leadership.map((it) => (
+        <li>
+          <span class="when">{it.when}</span>
+          <span class="what"><span class="role">{it.role}</span></span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="block reveal" style="--d:9">
+    <h3 class="eyebrow">Speaking &amp; teaching</h3>
+    <ul class="timeline compact">
+      {vm.speaking.map((it) => (
+        <li>
+          <span class="when">{it.when}</span>
+          <span class="what"><span class="role">{it.role}</span></span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="block reveal" style="--d:10">
+    <h3 class="eyebrow">Skills</h3>
+    <ul class="timeline compact skills">
+      {vm.skills.map((it) => (
+        <li>
+          <span class="when">{it.when}</span>
+          <span class="what"><span class="role">{it.role}</span></span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <footer class="foot reveal" style="--d:11">
+    <a href={vm.emailUrl}>{vm.email}</a>
+    <span>© {vm.year} {vm.name}</span>
+  </footer>
+</article>
