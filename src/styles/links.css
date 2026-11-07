@@ -9,7 +9,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.9rem 2rem;
+  align-items: center;
+  gap: 0.5rem 2rem;
   pointer-events: none;
 
   font-family: var(--font-mono);
@@ -19,13 +20,24 @@
   text-transform: uppercase;
 }
 
+@media (max-width: 480px) {
+  .links {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: clamp(0.25rem, 2vw, 0.75rem);
+    padding: 0 0.75rem;
+    box-sizing: border-box;
+  }
+}
+
 html.is-settled .links a { pointer-events: auto; }
 
 .links a {
   position: relative;
-  padding: 0.35rem 0;
+  padding: 0.25rem 0;
   color: var(--muted);
   text-decoration: none;
+  white-space: nowrap;
 
   opacity: 0;
   transform: translateY(10px);
