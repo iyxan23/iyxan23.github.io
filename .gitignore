@@ -47,7 +47,6 @@ yarn-error.log*
 
 .my-app*
 /.changelog
-lib/
 out/
 spec-reports
 template/src/__tests__/__snapshots__/
